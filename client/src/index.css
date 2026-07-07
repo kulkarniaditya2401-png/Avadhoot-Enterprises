@@ -486,8 +486,6 @@ ul {
     bottom: 0;
     opacity: 0.4;
     background-image: linear-gradient(var(--bg-light-3) 1px, transparent 1px),
-                      gradient-light-3 1px, transparent 1px;
-    background-image: linear-gradient(var(--bg-light-3) 1px, transparent 1px),
                       linear-gradient(90deg, var(--bg-light-3) 1px, transparent 1px);
     background-size: 40px 40px;
     pointer-events: none;
@@ -944,6 +942,20 @@ ul {
     justify-content: center;
 }
 
+/* Interactive Career Form styling */
+.career-form-card {
+    background-color: var(--bg-light-1);
+    border: 1px solid var(--bg-light-3);
+    border-radius: var(--border-radius-md);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.career-form-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
 /* ==========================================================================
    CONTACT SECTION
    ========================================================================== */
@@ -1035,6 +1047,60 @@ ul {
     font-size: 0.75rem;
     color: var(--text-muted);
     text-transform: uppercase;
+}
+
+/* Contact Quote Form Integration styling */
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.form-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.form-input {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    padding: 0.75rem;
+    border: 1px solid var(--bg-light-3);
+    border-radius: var(--border-radius-sm);
+    outline: none;
+    transition: var(--transition-fast);
+}
+
+.form-input:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.form-status {
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-status-success {
+    background-color: #dcfce7;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+.form-status-error {
+    background-color: var(--accent-red-soft);
+    color: var(--secondary);
+    border: 1px solid #fca5a5;
 }
 
 /* Map frame styling */
