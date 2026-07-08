@@ -8,9 +8,9 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer-grid">
                         <div className="footer-brand">
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-                                <img src={logo} alt="Avadhoot Enterprises Logo" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
-                                <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '1.25rem', color: 'white' }}>AVADHOOT</span>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1rem' }}>
+                                <img src={logo} alt="Avadhoot Enterprises Logo" style={{ width: '48px', height: '48px', objectFit: 'contain' }} />
+                                <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '1.35rem', color: 'white' }}>AVADHOOT</span>
                             </div>
                             <p>High-precision VMC, CNC, EDM Wire Cut & Drill machining contracts for automobile & switchgear manufacturers.</p>
                         </div>

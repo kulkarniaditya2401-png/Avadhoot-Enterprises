@@ -63,7 +63,7 @@ const Navbar = ({ activeSection }) => {
         <header className={`header ${isScrolled ? 'scrolled' : ''}`} id="header">
             <div className="container header-container">
                 <a href="#home" className="logo-link" onClick={(e) => handleLinkClick(e, 'home')}>
-                    <img src={logo} alt="Avadhoot Enterprises Logo" style={{ width: '45px', height: '45px', objectFit: 'contain' }} />
+                    <img src={logo} alt="Avadhoot Enterprises Logo" style={{ width: '54px', height: '54px', objectFit: 'contain' }} />
                     <div className="logo-text">
                         <span className="logo-title">AVADHOOT</span>
                         <span className="logo-tagline">Enterprises</span>
