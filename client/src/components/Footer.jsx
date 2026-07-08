@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/logo.png';
 
 const Footer = () => {
     return (
@@ -8,7 +9,7 @@ const Footer = () => {
                     <div className="footer-grid">
                         <div className="footer-brand">
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-                                <div className="logo-icon-placeholder" style={{ backgroundColor: 'var(--secondary)', color: 'var(--text-white)', width: '35px', height: '35px', fontSize: '1rem' }}>AE</div>
+                                <img src={logo} alt="Avadhoot Enterprises Logo" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
                                 <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '1.25rem', color: 'white' }}>AVADHOOT</span>
                             </div>
                             <p>High-precision VMC, CNC, EDM Wire Cut & Drill machining contracts for automobile & switchgear manufacturers.</p>

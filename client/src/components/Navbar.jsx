@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../assets/logo.png';
 
 const Navbar = ({ activeSection }) => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -62,7 +63,7 @@ const Navbar = ({ activeSection }) => {
         <header className={`header ${isScrolled ? 'scrolled' : ''}`} id="header">
             <div className="container header-container">
                 <a href="#home" className="logo-link" onClick={(e) => handleLinkClick(e, 'home')}>
-                    <div className="logo-icon-placeholder" aria-hidden="true">AE</div>
+                    <img src={logo} alt="Avadhoot Enterprises Logo" style={{ width: '45px', height: '45px', objectFit: 'contain' }} />
                     <div className="logo-text">
                         <span className="logo-title">AVADHOOT</span>
                         <span className="logo-tagline">Enterprises</span>
