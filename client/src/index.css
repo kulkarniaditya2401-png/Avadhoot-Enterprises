@@ -1071,6 +1071,9 @@ ul {
 }
 
 .form-input {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     font-family: var(--font-body);
     font-size: 0.95rem;
     padding: 0.75rem;
@@ -1316,5 +1319,36 @@ ul {
     
     .nav-cta .btn {
         width: 100%;
+    }
+}
+
+/* Mobile Devices (767px and down) */
+@media (max-width: 767px) {
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .careers-box {
+        padding: 2rem 1.25rem;
+        border-radius: var(--border-radius-md);
+    }
+    
+    .career-form-card {
+        padding: 1.25rem 1rem;
+    }
+    
+    .careers-roles {
+        gap: 0.5rem;
+    }
+    
+    .role-badge {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Ensure the direct buttons and wrappers scale to full width in careers info box */
+    .careers-info div,
+    .careers-info a {
+        max-width: 100% !important;
     }
 }
