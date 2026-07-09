@@ -196,17 +196,23 @@ const Contact = () => {
                         </div>
                     </div>
                     <div>
-                        <div className="map-wrapper">
-                            <div className="placeholder-image" style={{ height: '100%', minHeight: '400px' }}>
-                                <span className="placeholder-image-icon">🗺️</span>
-                                <span className="placeholder-image-label">[Google Maps Location Frame]</span>
-                                <span className="placeholder-image-dimensions">MIDC Ambad, Nashik, India</span>
+                        <div className="map-wrapper" style={{ minHeight: '440px', display: 'flex', flexDirection: 'column' }}>
+                            <iframe 
+                                title="Avadhoot Enterprises Workshop Location"
+                                src="https://maps.google.com/maps?q=F-106,%20MIDC,%20Ambad,%20Nashik,%20Maharashtra,%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                                width="100%" 
+                                height="370" 
+                                style={{ border: 0, display: 'block', flexGrow: 1 }} 
+                                allowFullScreen="" 
+                                loading="lazy"
+                            ></iframe>
+                            <div style={{ padding: '0.75rem', backgroundColor: 'var(--bg-light-1)', borderTop: '1px solid var(--bg-light-3)', display: 'flex', justifyContent: 'center' }}>
                                 <a 
-                                    href="https://maps.google.com/?q=F-106,+MIDC,+Ambad,+Nashik" 
+                                    href="https://www.google.com/maps/search/?api=1&query=F-106,+MIDC,+Ambad,+Nashik,+Maharashtra,+India" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
-                                    className="btn btn-primary" 
-                                    style={{ marginTop: '1.5rem' }}
+                                    className="btn btn-primary"
+                                    style={{ padding: '0.5rem 1.25rem', fontSize: '0.85rem' }}
                                 >
                                     Open in Google Maps
                                 </a>
