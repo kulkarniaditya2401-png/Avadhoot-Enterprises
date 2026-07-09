@@ -160,7 +160,15 @@ app.post('/api/careers', upload.single('resume'), (req, res) => {
     applications.push(newApplication);
     writeDataFile('applications.json', applications);
 
-    console.log(`[New Application] Received from ${name} for position ${role}. Resume stored: ${req.file ? req.file.filename : 'None'}`);
+    console.log(`[New Application] Received from ${name} for position ${role}.`);
+
+    // Clean up uploaded resume file from backend local disk immediately (Fail-safe storage protection)
+    if (req.file) {
+        fs.unlink(req.file.path, (err) => {
+            if (err) console.error("Error deleting uploaded resume file from disk:", err);
+            else console.log(`Successfully deleted uploaded file ${req.file.filename} to save server storage.`);
+        });
+    }
 
     res.json({ success: true, message: 'Application submitted successfully! Our HR team will evaluate your CV.' });
 });
