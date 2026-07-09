@@ -199,7 +199,7 @@ const Contact = () => {
                         <div className="map-wrapper" style={{ minHeight: '440px', display: 'flex', flexDirection: 'column' }}>
                             <iframe 
                                 title="Avadhoot Enterprises Workshop Location"
-                                src="https://maps.google.com/maps?q=F-106,%20MIDC,%20Ambad,%20Nashik,%20Maharashtra,%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                                src="https://maps.google.com/maps?q=Avadhoot%20Enterprises%20(Precision%20Machining%2C%20Machined%20Components%2C%20Mechanical%20parts%2CVMC%2C%20Wire%20Cut%2C%20Assembly)%2C%20F-106%2C%20MIDC%20Ambad%2C%20Nashik%2C%20Maharashtra%20422010&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                                 width="100%" 
                                 height="370" 
                                 style={{ border: 0, display: 'block', flexGrow: 1 }} 
@@ -208,7 +208,7 @@ const Contact = () => {
                             ></iframe>
                             <div style={{ padding: '0.75rem', backgroundColor: 'var(--bg-light-1)', borderTop: '1px solid var(--bg-light-3)', display: 'flex', justifyContent: 'center' }}>
                                 <a 
-                                    href="https://www.google.com/maps/search/?api=1&query=F-106,+MIDC,+Ambad,+Nashik,+Maharashtra,+India" 
+                                    href="https://maps.app.goo.gl/VG2zn9GRLFCnNn6n7?g_st=aw" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className="btn btn-primary"
