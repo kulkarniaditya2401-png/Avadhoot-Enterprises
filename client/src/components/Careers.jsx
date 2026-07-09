@@ -103,6 +103,10 @@ const Careers = () => {
                                     </svg>
                                     Apply via WhatsApp
                                 </a>
+                                <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.25rem', textAlign: 'center' }}>
+                                    Or email your CV directly to:<br />
+                                    <strong style={{ color: 'var(--primary-light)' }}>avadhoot33@gmail.com</strong>
+                                </p>
                             </div>
                         </div>
                         <div className="career-form-card">
