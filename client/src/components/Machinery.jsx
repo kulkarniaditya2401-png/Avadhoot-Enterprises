@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import workshopImg from '../assets/workshop.png';
 
 const Machinery = () => {
     const [machinery, setMachinery] = useState([]);
@@ -63,6 +64,32 @@ const Machinery = () => {
                 <div className="section-title-wrapper">
                     <span className="section-subtitle">Workshop Inventory</span>
                     <h2 className="section-title">Machinery & Assets</h2>
+                </div>
+
+                <div className="machinery-intro-grid" style={{ marginBottom: '3.5rem' }}>
+                    <div className="machinery-intro-text">
+                        <p style={{ fontSize: '1.1rem', color: 'var(--text-main)', lineHeight: '1.7', marginBottom: '1rem', fontWeight: '500' }}>
+                            Our state-of-the-art production facility in MIDC Ambad, Nashik is equipped with advanced vertical machining centers (VMC), wire-cut EDM machines, and heavy-duty precision tooling assets.
+                        </p>
+                        <p style={{ color: 'var(--text-muted)', lineHeight: '1.6', fontSize: '0.95rem' }}>
+                            Operating under ISO 9001:2015 guidelines, our climate-controlled workshop facilitates high-tolerance manufacturing of precision machined components, heavy tooling assemblies, and micro-machining jobs for global corporate industries.
+                        </p>
+                    </div>
+                    <div className="machinery-intro-image">
+                        <img 
+                            src={workshopImg} 
+                            alt="Avadhoot Enterprises Workshop Floor VMC Machining Center" 
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                                borderRadius: 'var(--border-radius-md)',
+                                boxShadow: 'var(--shadow-md)',
+                                border: '1px solid var(--bg-light-3)',
+                                transition: 'var(--transition-normal)'
+                            }}
+                            className="workshop-photo"
+                        />
+                    </div>
                 </div>
                 
                 <div className="table-responsive">

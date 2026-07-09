@@ -726,6 +726,26 @@ ul {
 /* ==========================================================================
    MACHINERY & ASSETS
    ========================================================================== */
+.machinery-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .machinery-intro-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 3.5rem;
+    }
+}
+
+.workshop-photo:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg) !important;
+    border-color: var(--secondary) !important;
+}
+
 .table-responsive {
     width: 100%;
     overflow-x: auto;
