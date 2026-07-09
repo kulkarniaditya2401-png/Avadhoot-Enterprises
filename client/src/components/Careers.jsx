@@ -30,7 +30,7 @@ const Careers = () => {
 
         setStatus({ 
             type: 'success', 
-            message: `Opening Gmail app... Please remember to attach your CV file (${file.name}) in Gmail before sending!` 
+            message: `Opening Gmail... Please click the paperclip (attachment) icon in Gmail and select your file "${file.name}" to send it!` 
         });
 
         // Submit metadata to backend so there is a text record of who applied (no file is sent, saving 100% server storage!)
@@ -68,10 +68,18 @@ Please find my resume attached to this email.
 Best regards,
 ${formData.name}`);
 
-        const mailtoUrl = `mailto:avadhoot33@gmail.com?subject=${subject}&body=${body}`;
-        
-        // Open the native mail app directly
-        window.location.href = mailtoUrl;
+        // Detect if user is on a mobile device
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            // Open native Gmail / Mail app on mobile
+            const mailtoUrl = `mailto:avadhoot33@gmail.com?subject=${subject}&body=${body}`;
+            window.location.href = mailtoUrl;
+        } else {
+            // Open Web-based Gmail Compose on PC in a new tab
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=avadhoot33@gmail.com&su=${subject}&body=${body}`;
+            window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+        }
 
         // Reset form inputs
         setFormData({ name: '', email: '', phone: '', role: 'VMC Operator' });
