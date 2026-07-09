@@ -1,4 +1,5 @@
 import React from 'react';
+import componentsImg from '../assets/components.png';
 
 const About = () => {
     return (
@@ -34,11 +35,18 @@ const About = () => {
                         </div>
                     </div>
                     <div>
-                        <div className="placeholder-image" style={{ height: '380px' }}>
-                            <span className="placeholder-image-icon">🔩</span>
-                            <span className="placeholder-image-label">[Precision VMC Copper/Turned Parts Component Samples]</span>
-                            <span className="placeholder-image-dimensions">800 x 600 (Ideal)</span>
-                        </div>
+                        <img 
+                            src={componentsImg} 
+                            alt="Avadhoot Enterprises Precision VMC Copper and Turned Parts Component Samples" 
+                            style={{
+                                width: '100%',
+                                height: '380px',
+                                objectFit: 'cover',
+                                borderRadius: 'var(--border-radius-md)',
+                                boxShadow: 'var(--shadow-md)',
+                                border: '1px solid var(--bg-light-3)'
+                            }}
+                        />
                     </div>
                 </div>
             </div>
