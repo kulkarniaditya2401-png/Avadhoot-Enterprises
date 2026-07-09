@@ -1,4 +1,5 @@
 import React from 'react';
+import workshopImg from '../assets/workshop.png';
 
 const Hero = () => {
     return (
@@ -30,11 +31,18 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="hero-image-wrapper">
-                    <div className="placeholder-image" style={{ height: '380px' }}>
-                        <span className="placeholder-image-icon">🏭</span>
-                        <span className="placeholder-image-label">[Workshop Machinery View]</span>
-                        <span className="placeholder-image-dimensions">1200 x 800 (Ideal)</span>
-                    </div>
+                    <img 
+                        src={workshopImg} 
+                        alt="Avadhoot Enterprises Precision VMC Machining Workshop Floor" 
+                        style={{
+                            width: '100%',
+                            height: '380px',
+                            objectFit: 'cover',
+                            borderRadius: 'var(--border-radius-md)',
+                            boxShadow: 'var(--shadow-md)',
+                            border: '1px solid var(--bg-light-3)'
+                        }}
+                    />
                     <div className="hero-stats-card">
                         <div className="hero-stats-num">15+</div>
                         <div className="hero-stats-text">Years of<br />Excellence</div>
