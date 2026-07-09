@@ -7,7 +7,6 @@ const Careers = () => {
         phone: '',
         role: 'VMC Operator'
     });
-    const [file, setFile] = useState(null);
     const [status, setStatus] = useState({ type: '', message: '' });
     const [loading, setLoading] = useState(false);
 
@@ -16,21 +15,12 @@ const Careers = () => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleFileChange = (e) => {
-        setFile(e.target.files[0]);
-    };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         
-        if (!file) {
-            setStatus({ type: 'error', message: 'Please upload your Resume/CV file.' });
-            return;
-        }
-
         setStatus({ 
             type: 'success', 
-            message: `Opening Gmail... Please click the paperclip (attachment) icon in Gmail and select your file "${file.name}" to send it!` 
+            message: `Opening Gmail... Please remember to click the paperclip (attachment) icon to attach your resume file!` 
         });
 
         // Submit metadata to backend so there is a text record of who applied (no file is sent, saving 100% server storage!)
@@ -83,7 +73,6 @@ ${formData.name}`);
 
         // Reset form inputs
         setFormData({ name: '', email: '', phone: '', role: 'VMC Operator' });
-        setFile(null);
         e.target.reset();
     };
 
@@ -169,18 +158,10 @@ ${formData.name}`);
                                         ))}
                                     </select>
                                 </div>
-                                <div className="form-group">
-                                    <label className="form-label" htmlFor="career-resume">Upload CV (PDF, DOCX) *</label>
-                                    <input 
-                                        type="file" 
-                                        id="career-resume" 
-                                        accept=".pdf,.doc,.docx" 
-                                        className="form-input" 
-                                        onChange={handleFileChange} 
-                                        required 
-                                        disabled={loading}
-                                        style={{ padding: '0.5rem' }}
-                                    />
+                                <div className="form-group" style={{ marginTop: '0.5rem', marginBottom: '0.5rem' }}>
+                                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: '1.4' }}>
+                                        📎 <strong>Note:</strong> You will be redirected to Gmail to send the application. Please remember to click the <strong>attachment (paperclip)</strong> icon inside Gmail to attach your CV/Resume file.
+                                    </p>
                                 </div>
                                 <button type="submit" className="btn btn-primary" style={{ marginTop: '0.5rem' }} disabled={loading}>
                                     {loading ? 'Submitting...' : 'Submit Application'}
