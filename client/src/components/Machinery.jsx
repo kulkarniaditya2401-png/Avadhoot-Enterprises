@@ -25,10 +25,11 @@ const Machinery = () => {
     ];
 
     useEffect(() => {
+        const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
         const fetchData = async () => {
             try {
                 // Fetch machinery
-                const machRes = await fetch('http://localhost:5000/api/machinery');
+                const machRes = await fetch(`${API_BASE_URL}/api/machinery`);
                 if (machRes.ok) {
                     const machData = await machRes.json();
                     setMachinery(machData);
@@ -37,7 +38,7 @@ const Machinery = () => {
                 }
 
                 // Fetch PMI
-                const pmiRes = await fetch('http://localhost:5000/api/pmi');
+                const pmiRes = await fetch(`${API_BASE_URL}/api/pmi`);
                 if (pmiRes.ok) {
                     const pmiData = await pmiRes.json();
                     setPmi(pmiData);

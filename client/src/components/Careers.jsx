@@ -38,8 +38,10 @@ const Careers = () => {
         submitData.append('role', formData.role);
         submitData.append('resume', file);
 
+        const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
         try {
-            const response = await fetch('http://localhost:5000/api/careers', {
+            const response = await fetch(`${API_BASE_URL}/api/careers`, {
                 method: 'POST',
                 body: submitData
             });
