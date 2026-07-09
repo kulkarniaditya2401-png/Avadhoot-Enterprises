@@ -23,28 +23,41 @@ const Contact = () => {
 
         const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
+        // Submit to Express backend first so you have a local JSON file record of all inquiries
         try {
-            const response = await fetch(`${API_BASE_URL}/api/contact`, {
+            await fetch(`${API_BASE_URL}/api/contact`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(formData)
             });
-
-            const result = await response.json();
-            if (response.ok && result.success) {
-                setStatus({ type: 'success', message: result.message });
-                setFormData({ name: '', email: '', phone: '', company: '', message: '' });
-            } else {
-                setStatus({ type: 'error', message: result.message || 'Error submitting inquiry.' });
-            }
         } catch (err) {
-            console.error('Error submitting contact form:', err);
-            setStatus({ type: 'error', message: 'Unable to contact backend. Please get a quote via WhatsApp.' });
-        } finally {
-            setLoading(false);
+            console.warn('Unable to log inquiry to server:', err);
         }
+
+        // Construct pre-filled WhatsApp message details
+        const messageText = `Hello Avadhoot Enterprises,
+
+I would like to submit an inquiry. Here are my details:
+- Full Name: ${formData.name}
+- Email Address: ${formData.email}
+- Phone Number: ${formData.phone || 'N/A'}
+- Company Name: ${formData.company || 'N/A'}
+
+Technical Schematics / Requirements:
+${formData.message}
+
+Thank you!`;
+
+        const whatsappUrl = `https://wa.me/919623990255?text=${encodeURIComponent(messageText)}`;
+
+        // Open WhatsApp in a new window/tab
+        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
+        setStatus({ type: 'success', message: 'Inquiry details recorded. Opening WhatsApp...' });
+        setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+        setLoading(false);
     };
 
     return (
