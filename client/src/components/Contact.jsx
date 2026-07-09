@@ -148,8 +148,8 @@ const Contact = () => {
                                 <div className="contact-info-item">
                                     <div className="contact-info-icon">✉️</div>
                                     <div className="contact-info-details">
-                                        <h4>Email Address</h4>
-                                        <p><a href="mailto:avadhoot33@gmail.com">avadhoot33@gmail.com</a></p>
+                                         <h4>Email Address</h4>
+                                         <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=avadhoot33@gmail.com&su=Inquiry%20-%20Avadhoot%20Enterprises" target="_blank" rel="noopener noreferrer">avadhoot33@gmail.com</a></p>
                                     </div>
                                 </div>
                                 <div className="contact-info-item">

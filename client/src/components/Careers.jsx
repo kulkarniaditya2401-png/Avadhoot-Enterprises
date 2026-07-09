@@ -85,22 +85,17 @@ const Careers = () => {
 
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '320px' }}>
                                 <a 
-                                    href="mailto:avadhoot33@gmail.com?subject=Job%20Application%20-%20Avadhoot%20Enterprises" 
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=avadhoot33@gmail.com&su=Job%20Application%20-%20Avadhoot%20Enterprises&body=Hello%20Avadhoot%20Enterprises,%0A%0AI%20am%20interested%20in%20career%20opportunities%20at%20Avadhoot%20Enterprises.%20Please%20find%20my%20application%20details%20and%20resume%20attached.%0A%0ABest%20regards," 
                                     className="btn btn-primary" 
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     style={{ width: '100%' }}
-                                    onClick={() => {
-                                        navigator.clipboard.writeText('avadhoot33@gmail.com');
-                                        setStatus({ 
-                                            type: 'success', 
-                                            message: 'Email address (avadhoot33@gmail.com) copied to clipboard! You can now paste it into your email.' 
-                                        });
-                                    }}
                                 >
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ verticalAlign: 'middle', marginRight: '0.25rem' }}>
                                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                         <polyline points="22,6 12,13 2,6"></polyline>
                                     </svg>
-                                    Apply via Email
+                                    Apply via Gmail
                                 </a>
                                 <a 
                                     href="https://wa.me/919623990255?text=Hello%20Avadhoot%20Enterprises,%20I%20am%20interested%20in%20career%20opportunities%20and%20would%20like%20to%20send%20my%20resume." 
