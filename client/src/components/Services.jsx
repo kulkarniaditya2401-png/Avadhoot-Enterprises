@@ -52,8 +52,8 @@ const Services = () => {
                     <path d="M7 10h2" />
                 </svg>
             ),
-            title: 'EDM-DRL Manufacturing',
-            desc: 'EDM Drill manufacturing and engineering operations for high-penetration job work, custom tooling, and deep-hole micro drilling.',
+            title: 'EDM-DRL Drilling Operations',
+            desc: 'EDM Drill operations and engineering services for high-penetration job work, custom tooling, and deep-hole micro drilling.',
             capabilities: [
                 'Deep micro-hole drilling',
                 'Custom tooling development',
