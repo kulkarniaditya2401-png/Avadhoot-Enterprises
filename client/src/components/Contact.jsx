@@ -178,7 +178,7 @@ Thank you!`;
                                 <div className="contact-person-card">
                                     <div>
                                         <p className="contact-person-name">Manish Deshpande</p>
-                                        <p className="contact-person-role">Partner / Engineer</p>
+                                        <p className="contact-person-role">Engineer</p>
                                     </div>
                                     <a 
                                         href="https://wa.me/919623990255?text=Hello%20Avadhoot%20Enterprises,%20I%20would%20like%20to%20discuss%20our%20technical%20schematics%20and%20manufacturing%20requirements." 
@@ -193,7 +193,7 @@ Thank you!`;
                                 <div className="contact-person-card">
                                     <div>
                                         <p className="contact-person-name">Abhijeet Patki</p>
-                                        <p className="contact-person-role">Partner / Engineer</p>
+                                        <p className="contact-person-role">Engineer</p>
                                     </div>
                                     <a 
                                         href="https://wa.me/919689290090?text=Hello%20Avadhoot%20Enterprises,%20I%20would%20like%20to%20discuss%20our%20technical%20schematics%20and%20manufacturing%20requirements." 
