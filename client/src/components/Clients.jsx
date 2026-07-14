@@ -2,12 +2,20 @@ import React from 'react';
 
 const Clients = () => {
     const clientsList = [
-        { name: "Mahindra & Mahindra", industry: "Plant II, Nashik" },
-        { name: "ThyssenKrupp India", industry: "Industrial Systems" },
-        { name: "SM Auto Stamping Ltd", industry: "Automotive Components" },
-        { name: "Reliable Auto Tech", industry: "OEM Auto Parts" },
-        { name: "Anish Pharma Equipment", industry: "Pharmaceutical Tooling" },
-        { name: "MSS India Ltd", industry: "Electrical & Switchgear" }
+        { name: "Anish Pharmaceuticals", industry: "Pharmaceutical Tooling" },
+        { name: "DG Connect", industry: "Industrial Automation" },
+        { name: "Multitech Engg", industry: "Precision Machining" },
+        { name: "Nikash CNC Engg Pvt Ltd", industry: "CNC Components" },
+        { name: "Echoflo Industries", industry: "Flow Control Systems" },
+        { name: "ProLaser Sales & Private Ltd", industry: "Laser Processing" },
+        { name: "SMP Auto", industry: "Automotive Assemblies" },
+        { name: "Sinner Ure-Plas Pvt.Ltd", industry: "Polyurethane Products" },
+        { name: "Nashtech Engg", industry: "Tooling & Jig Work" },
+        { name: "Oriental Engg", industry: "Heavy Machine Tooling" },
+        { name: "Marsman India Ltd", industry: "Crushing & Screening" },
+        { name: "DNA Engg", industry: "Precision Components" },
+        { name: "Metacarb Engg", industry: "Carbide Tooling" },
+        { name: "Reliable Auto", industry: "OEM Auto Parts" }
     ];
 
     return (
