@@ -2,20 +2,20 @@ import React from 'react';
 
 const Clients = () => {
     const clientsList = [
-        "Anish Pharmaceuticals",
-        "DG Connect",
-        "Multitech Engg",
-        "Nikash CNC Engg Pvt Ltd",
-        "Echoflo Industries",
-        "ProLaser Sales & Private Ltd",
-        "SMP Auto",
-        "Sinner Ure-Plas Pvt.Ltd",
-        "Nashtech Engg",
-        "Oriental Engg",
-        "Marsman India Ltd",
-        "DNA Engg",
-        "Metacarb Engg",
-        "Reliable Auto"
+        { name: "Anish Pharmaceuticals", industry: "Pharmaceutical Tooling" },
+        { name: "DG Connect", industry: "Industrial Automation" },
+        { name: "Multitech Engg", industry: "Precision Machining" },
+        { name: "Nikash CNC Engg Pvt Ltd", industry: "CNC Components" },
+        { name: "Echoflo Industries", industry: "Flow Control Systems" },
+        { name: "ProLaser Sales & Private Ltd", industry: "Laser Processing" },
+        { name: "SMP Auto", industry: "Automotive Assemblies" },
+        { name: "Sinner Ure-Plas Pvt.Ltd", industry: "Polyurethane Products" },
+        { name: "Nashtech Engg", industry: "Tooling & Jig Work" },
+        { name: "Oriental Engg", industry: "Heavy Machine Tooling" },
+        { name: "Marsman India Ltd", industry: "Crushing & Screening" },
+        { name: "DNA Engg", industry: "Precision Components" },
+        { name: "Metacarb Engg", industry: "Carbide Tooling" },
+        { name: "Reliable Auto", industry: "OEM Auto Parts" }
     ];
 
     return (
@@ -29,7 +29,8 @@ const Clients = () => {
                 <div className="clients-grid">
                     {clientsList.map((client, index) => (
                         <div className="client-card" key={index}>
-                            <span className="client-logo-placeholder">{client}</span>
+                            <span className="client-logo-placeholder">{client.name}</span>
+                            <span className="client-industry">{client.industry}</span>
                         </div>
                     ))}
                 </div>
